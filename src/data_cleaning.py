@@ -99,3 +99,20 @@ cleaned_df.to_csv(
 
 print("\n========== FILE SAVED ==========")
 print("Cleaned dataset saved successfully!")
+
+# Final Data Quality Checks
+
+print("\nFinal Data Quality Report")
+print("-------------------------")
+
+print("Total rows:", cleaned_df.shape[0])
+print("Total columns:", cleaned_df.shape[1])
+
+print("\nMissing values after cleaning:")
+print(cleaned_df.isnull().sum())
+
+print("\nDuplicate records after cleaning:")
+print(cleaned_df.duplicated().sum())
+
+print("\nFinal data information:")
+cleaned_df.info()
